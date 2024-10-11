@@ -20,7 +20,7 @@ Feipeng Ma<sup>1,2</sup>, Hongwei Xue<sup>1,2,3</sup>, Yizhou Zhou<sup>2</sup>, 
 </div>
 
 >💡💡💡
-> We proposes **💡a novel parameter space alignment paradigm** for MLLMs to address the inefficiency of input space alignment paradigm in visual perception, introducing VLoRA that **💡converts visual features to LoRA weights**, **💡achieving comparable performance** on various benchmarks while **💡significantly reducing computational costs for training and inference**.
+> We propose **💡a novel parameter space alignment paradigm** for MLLMs to address the inefficiency of input space alignment paradigm in visual perception, introducing VLoRA that **💡converts visual features to LoRA weights**, **💡achieving comparable performance** on various benchmarks while **💡significantly reducing computational costs for training and inference**.
 
 
 **News**
