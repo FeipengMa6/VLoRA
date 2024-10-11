@@ -41,9 +41,8 @@ To address this issue, we explore a novel **parameter space alignment paradigm**
 <p align="center">
 <img src="images/vlora_method.png" width="666">
 </p>
-This figure illustrates the details of our perceptual weights
-generator. We set $k$ learnable perceptual queries, which interact with image features in $N$ decoder
-blocks, and obtain $k$ visual parameters. Then, a shared linear layer and $k$ independent linear layers are used to convert these visual parameters to perceptual weights $\Delta W$. The left figure demonstrates that our approach is formally consistent with LoRA.
+
+This figure illustrates the details of our perceptual weights generator. We set $k$ learnable perceptual queries, which interact with image features in $N$ decoder blocks, and obtain $k$ visual parameters. Then, a shared linear layer and $k$ independent linear layers are used to convert these visual parameters to perceptual weights $\Delta W$. The left figure demonstrates that our approach is formally consistent with LoRA.
 
 ## Models
 We upload the checkpoint of VLoRA to huggingface, you can access [VLoRA-7b-v1](https://huggingface.co/feipengma/VLoRA-7b-v1) for inference.
