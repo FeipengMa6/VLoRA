@@ -1,0 +1,51 @@
+#!/bin/bash
+
+PYTHONPATH=./ torchrun --nproc_per_node 8 \
+    llava/train/train_mem.py \
+    --deepspeed ./scripts/zero2.json \
+    --model_name_or_path lmsys/vicuna-7b-v1.5 \
+    --version v1 \
+    --data_path ./playground/data/llava_v1_5_mix665k.json \
+    --image_folder ./playground/data \
+    --vision_tower clip-vit-large-patch14-336 \
+    --pretrain_mm_mlp_adapter checkpoints/vlora-7b-pretrain/checkpoint-40000/mm_projector.bin \
+    --mm_projector_type vlora \
+    --mm_vision_select_layer -2 \
+    --mm_use_im_start_end False \
+    --mm_use_im_patch_token False \
+    --image_aspect_ratio pad \
+    --group_by_modality_length True \
+    --bf16 True \
+    --output_dir checkpoints/vlora-7b-sft \
+    --num_train_epochs 1 \
+    --per_device_train_batch_size 16 \
+    --per_device_eval_batch_size 4 \
+    --gradient_accumulation_steps 1 \
+    --evaluation_strategy "no" \
+    --save_strategy "steps" \
+    --save_steps 50000 \
+    --save_total_limit 1 \
+    --learning_rate 2e-5 \
+    --weight_decay 0. \
+    --warmup_ratio 0.03 \
+    --lr_scheduler_type "cosine" \
+    --logging_steps 1 \
+    --tf32 True \
+    --model_max_length 2048 \
+    --gradient_checkpointing True \
+    --dataloader_num_workers 32 \
+    --dataloader_pin_memory True \
+    --lazy_preprocess True \
+    --report_to wandb \
+    --run_name vlora-7b-sft \
+    --vlora_dim 512 \
+    --vlora_depth 8 \
+    --vlora_visual_dim 1024 \
+    --vlora_pos_num 576 \
+    --vlora_llm_dim 4096 \
+    --vlora_llm_depth 32 \
+    --vlora_rank 64 \
+    --vlora_alpha 64 \
+    --vlora_type qkvom \
+    --weights_sep True \
+    --skip_layers 4
