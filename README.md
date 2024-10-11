@@ -19,10 +19,31 @@ Feipeng Ma<sup>1,2</sup>, Hongwei Xue<sup>1,2,3</sup>, Yizhou Zhou<sup>2</sup>, 
 </p>
 </div>
 
+>💡💡💡
+> We proposes **💡a novel parameter space alignment paradigm** for MLLMs to address the inefficiency of input space alignment paradigm in visual perception, introducing VLoRA that **💡converts visual features to LoRA weights**, **💡achieving comparable performance** on various benchmarks while **💡significantly reducing computational costs for training and inference**.
+
+
 **News**
 * **[2024-10-02]**  Code and model are released.
 * **[2024-09-26]**  VLoRA is accepted by **NeurIPS 2024**.
 
+## Overview
+**1. A Novel Parameter Space Alignment Paradigm**
+<p align="center">
+<img src="images/vlora_teaser.png" width="666">
+</p>
+
+Recent MLLMs follow an **input space alignment paradigm** that aligns visual features with the input space of LLM and concatenates visual tokens with text tokens to form a unified sequence as input for LLM. This can result in computational inefficiency for both training and inference. 
+To address this issue, we explore a novel **parameter space alignment paradigm** where visual information is represented as LLM’s weights. As shown in the above figure, we design perceptual weights generator to convert visual feature to LoRA weights and merge them into LLM, eliminating the need for visual tokens in the LLM’s input and significantly improving efficiency for training and inference.
+
+
+**2. Perceptual Weights Generator**
+<p align="center">
+<img src="images/vlora_method.png" width="666">
+</p>
+This figure illustrates the details of our perceptual weights
+generator. We set $k$ learnable perceptual queries, which interact with image features in $N$ decoder
+blocks, and obtain $k$ visual parameters. Then, a shared linear layer and $k$ independent linear layers are used to convert these visual parameters to perceptual weights $\Delta W$. The left figure demonstrates that our approach is formally consistent with LoRA.
 
 ## Models
 We upload the checkpoint of VLoRA to huggingface, you can access [VLoRA-7b-v1](https://huggingface.co/feipengma/VLoRA-7b-v1) for inference.
@@ -89,7 +110,8 @@ We use [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) to evaluate the 
 
 
 ## Acknowledgments
-This work is heavily based on [LLaVA](https://github.com/haotian-liu/LLaVA). Thanks for their great work!
+This codebase is built upon [LLaVA](https://github.com/haotian-liu/LLaVA). 
+Thanks for their outstanding work!
 
 ## Citation
 If you find VLoRA is useful for your research, please cite us:
