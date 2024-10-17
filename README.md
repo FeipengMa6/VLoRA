@@ -2,9 +2,16 @@
 <br>
 <h3>Visual Perception by Large Language Model's Weights</h3>
 
-Feipeng Ma<sup>1,2</sup>, Hongwei Xue<sup>1,2,3</sup>, Yizhou Zhou<sup>2</sup>, Guangting Wang<sup>2</sup>, Fengyun Rao<sup>2</sup>, <br>Shilin Yan<sup>4</sup>, Yueyi Zhang<sup>1</sup>, Siying Wu<sup>1</sup>, Mike Zheng Shou<sup>3</sup>, Xiaoyan Sun<sup>1</sup>
+[Feipeng Ma](https://scholar.google.com/citations?user=ZDxabCwAAAAJ&hl=zh-CN&oi=ao)<sup>1,2</sup>, [Hongwei Xue](https://scholar.google.com/citations?user=k5CJa5YAAAAJ&hl=zh-CN&oi=ao)<sup>†1,2,3</sup>, [Yizhou Zhou](https://scholar.google.com/citations?user=dHBNmSkAAAAJ&hl=zh-CN&oi=ao)<sup>‡2</sup>, [Guangting Wang](https://scholar.google.com/citations?user=cKY8e8sAAAAJ&hl=zh-CN&oi=ao)<sup>2</sup>, [Fengyun Rao](https://scholar.google.com/citations?user=38dACd4AAAAJ&hl=zh-CN&oi=ao)<sup>2</sup>, <br>[Shilin Yan](https://scholar.google.com/citations?user=2VhjOykAAAAJ&hl=zh-CN&oi=ao)<sup>4</sup>, [Yueyi Zhang](https://scholar.google.com/citations?user=LatWlFAAAAAJ&hl=zh-CN&oi=ao)<sup>‡1</sup>, Siying Wu<sup>5</sup>, [Mike Zheng Shou](https://scholar.google.com/citations?user=h1-3lSoAAAAJ&hl=zh-CN)<sup>3</sup>, [Xiaoyan Sun](https://scholar.google.com/citations?user=VRG3dw4AAAAJ&hl=zh-CN&oi=ao)<sup>‡1,5</sup>
 
-<sup>1</sup>University of Science and Technology of China <sup>2</sup>WeChat, Tencent Inc. <br> <sup>3</sup>Show Lab, National University of Singapore <sup>4</sup>Fudan University
+<div class="is-size-6 publication-authors">
+  <p class="footnote">
+    <span class="footnote-symbol"><sup>†</sup></span>Project leader
+    <span class="footnote-symbol"><sup>‡</sup></span>Corresponding authors
+  </p>
+</div>
+
+<sup>1</sup>University of Science and Technology of China <sup>2</sup>WeChat, Tencent Inc. <br> <sup>3</sup>Show Lab, National University of Singapore <sup>4</sup>Fudan University <sup>5</sup>Institute of Artificial Intelligence, Hefei Comprehensive National Science Center
 
 
 <p align="center">
